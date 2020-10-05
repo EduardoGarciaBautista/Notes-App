@@ -1,7 +1,17 @@
 import React from "react";
 import {NotesEntries} from "./NotesEntries";
+import {useDispatch} from "react-redux";
+import {startLogOut} from "../../actions/auth";
 
 export const Sidebar = () => {
+
+    const dispatch = useDispatch();
+
+    const handleLogOut = (e) => {
+        e.preventDefault();
+        dispatch(startLogOut());
+
+    }
     return(
         <aside className="notes__sidebar">
             <div className="notes__sidebar-navbar">
@@ -10,7 +20,9 @@ export const Sidebar = () => {
                     <span> Eduardo</span>
                 </h3>
 
-                <button className="btn">
+                <button
+                    onClick={handleLogOut}
+                    className="btn">
                     Log Out
                 </button>
             </div>

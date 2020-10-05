@@ -1,6 +1,5 @@
 import React from "react";
 import {Sidebar} from "./Sidebar";
-import {NothingSelected} from "./NothingSelected";
 import {NoteScreen} from "../note/NoteScreen";
 
 export const NotesScreen = () => {
